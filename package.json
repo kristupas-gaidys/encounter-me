@@ -20,6 +20,8 @@
     "axios": "^0.27.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-hook-form": "^7.31.2",
+    "react-hook-form-mui": "^3.5.5",
     "react-query": "^3.38.1",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",

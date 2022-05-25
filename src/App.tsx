@@ -14,7 +14,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<TrailList />} />
           <Route path="trails" element={<TrailList />} />
-          <Route path="trails/:id" element={<Trail />} />
+          <Route path="trail/:id" element={<Trail />} />
         </Routes>
       </Router>
     </div>

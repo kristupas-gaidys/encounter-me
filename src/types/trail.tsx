@@ -1,4 +1,4 @@
-export type Trail = {
+export type TrailType = {
   id: string;
   name: string;
   length: number;
