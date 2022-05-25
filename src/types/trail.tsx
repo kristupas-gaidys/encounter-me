@@ -7,3 +7,10 @@ export type TrailType = {
   uploadDate: Date;
   rating: number;
 };
+
+export type TrailTypePost = {
+  name: string;
+  startLocation: string;
+  endLocation: string;
+  length: number;
+};
