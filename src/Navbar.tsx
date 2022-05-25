@@ -8,7 +8,9 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   const navigateBrowse = () => navigate('/trails');
+  // eslint-disable-next-line no-console
   const navigateStatistics = () => console.log('navigates to statistics');
+  // eslint-disable-next-line no-console
   const navigateCreate = () => console.log('navigates to trail creation');
 
   return (
