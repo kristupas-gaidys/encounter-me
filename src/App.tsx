@@ -12,6 +12,7 @@ export default function App() {
       <Router>
         <Navbar />
         <Routes>
+          <Route path="/" element={<TrailList />} />
           <Route path="trails" element={<TrailList />} />
           <Route path="trails/:id" element={<Trail />} />
         </Routes>

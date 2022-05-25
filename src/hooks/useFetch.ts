@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 type Props = {
   path: string;
   method: 'GET' | 'POST';
-  payload: any;
+  payload?: any;
 };
 
 /// Method represents the http method
@@ -12,38 +12,36 @@ type Props = {
 /// Make sure to extend getResponse function
 
 export default function useFetch({ path, method, payload }: Props) {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<any>();
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const route = `https://localhost:5000${path}`;
+  const route = `https://localhost:5001${path}`;
 
   async function getResponse() {
     let response;
     if (method === 'GET') {
-      response = await axios.get(route);
+      response = axios.get(route);
     }
     if (method === 'POST') {
-      response = await axios.post(route, payload);
+      response = axios.post(route, payload);
     }
     return response;
   }
 
   useEffect(() => {
-    // eslint-disable-next-line wrap-iife
-    (async function () {
+    setLoading(true);
+    (async () => {
       try {
-        setLoading(true);
         const response = await getResponse();
-        // const response = await axios.get(path);
         setData(response!.data);
-      } catch (err: any) {
-        setError(err);
+      } catch (err) {
+        setError(error);
       } finally {
         setLoading(false);
       }
     })();
-  }, [path]);
+  }, []);
 
   return { data, error, loading };
 }
