@@ -1,7 +1,13 @@
 {
   "extends": ["airbnb", "airbnb-typescript"],
   "rules": {
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "operator-linebreak": "off",
+    "object-curly-newline": "off",
+    "object-shorthand": "off",
+    "@typescript-eslint/return-await": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "max-len": "off"
   },
   "parserOptions": {
     "project": "./tsconfig.json"
